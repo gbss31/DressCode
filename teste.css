@@ -1,0 +1,73 @@
+form {
+  background: linear-gradient(to right, #4e246fa6, #1d2b53c8);
+  padding: 60px;
+  border-radius: 10px; 
+  max-width: 550px;
+  margin: 40px auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 100px;
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+  font-family: "Anton", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #5823cc;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  background-color: #5923cc80
+}
+
+body {
+  background: linear-gradient(to bottom, #b8b2b2, #4e57bc51); /* De cima para baixo, de cinza claro para escuro */
+  height: 100vh; /* Faz o fundo cobrir toda a altura da tela */
+  margin: 0;    
+
+}
+
+h1 {
+  text-align: center;
+   font-family: "Protest Strike", sans-serif;
+   font-weight: 700;
+   font-style: normal;
+   margin-top: 50px;
+   margin-bottom: 50px;
+   font-size: 42px;
+
+}
+
+.login-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px ;
+  font-family: "Anton", sans-serif;
+  gap: 10px;
+}
+
+
+
+
+

@@ -1,0 +1,119 @@
+body {
+    background: linear-gradient(to bottom, #b8b2b2, #4e57bc51); 
+    height: 100vh;
+    margin: 0;
+    font-family: "Lexend", sans-serif; 
+}
+
+h1 {
+    text-align: center;
+    font-family: "Protest Strike", sans-serif;
+    font-weight: 700;
+    margin-top: 100px;
+    margin-bottom: 20px;
+    font-size: 42px;
+}
+
+h2 {
+    text-align: center;
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 550px;
+}
+
+li {
+    background: #3f2947b1;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 10px 0;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    font-size: 18px;
+    margin-top: 30px;
+    margin-bottom: 35px;
+}
+
+.nadacp {
+    background: #3f2947b1; 
+    padding: 15px;
+    border-radius: 5px;
+    margin: 10px 0; 
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); 
+    font-size: 18px; 
+    margin-top: 30px;
+    margin-bottom: 35px;
+}
+
+
+.erro-msg {
+    color: red;
+    text-align: center; 
+    margin-top: 10px;
+}
+
+.registro-link {
+    text-align: center;
+    margin-top: 15px;
+}
+
+img[class="logo"] {
+
+    width: 180px;
+    height: 180px;
+    position: absolute;
+    top: 48px;
+    left: 430px;
+}
+
+.btn_voltar {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #201d39f2;
+    color: white;
+    border: none; 
+    border-radius: 8px; 
+    cursor: pointer; 
+    transition: background-color 0.3s, transform 0.2s;
+    top: 15px;
+    right: 40px;
+    position: absolute;
+    padding: 15px 20px;
+
+  }
+  
+  .btn_voltar:hover{
+  
+    background-color: #110f23a3;
+  }
+   
+  button[name = "logoff"] {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #201d39f2;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    top: 15px;
+    left: 40px;
+    position: absolute;
+    padding: 15px 20px;
+
+  }
+  
+  button [name = "logoff:hover"]{
+  
+    background-color: #110f23a3;
+    border: 1px red;
+  }
+   
