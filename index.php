@@ -3,6 +3,8 @@ session_start();
 
 require 'db.php';
 
+$usuario1 = isset($_SESSION['usuario_id']) ? $_SESSION['usuario_id'] : null;
+
 $db = getDBConnection();
 
 
@@ -22,6 +24,14 @@ $db->exec("CREATE TABLE IF NOT EXISTS compras (
     FOREIGN KEY (produto_id) REFERENCES produtos(id))");
 
 $result = $db->query("SELECT * FROM produtos");
+
+
+$stmt = $db->prepare("SELECT * FROM usuarios WHERE id = ?");
+$stmt->bindValue(1, $usuario1);
+$stmt->execute();
+$usuario = $stmt->fetch(PDO::FETCH_ASSOC);
+
+
 
 
 if (!$result) {
@@ -56,10 +66,13 @@ if (isset($_POST['logoff'])) {
     
 <img src = "logo.png" alt="logo" class="logo">
 
+
 <!-- botao para add roupas apenas para funcionario -->
 <?php if (isset($_SESSION['logado']) && isset($_SESSION['is_funcionario']) && $_SESSION['is_funcionario']): ?>
     <a href="add_product.php">Adicionar Produto</a>
 <?php endif; ?>
+
+
 
 
 <h2>Produtos Disponíveis</h2>
@@ -100,11 +113,11 @@ if (isset($_POST['logoff'])) {
     </div>
 <?php endif ?>
 
-<?php if (isset($_SESSION['logado']) && !isset($_SESSION['is_funcionario']) && !$_SESSION['is_funcionario']): ?>
+<?php if (isset($_SESSION['logado']) && (!isset($_SESSION['is_funcionario']) || !$_SESSION['is_funcionario'])): ?>
     
     <div class="header"> 
         <form action="conta.php" method="get">
-            <button type="submit" class="btn_conta">Conta</button>
+            <button type="submit" class="btn_conta">Conta de <?php echo htmlspecialchars($usuario['usuario']); ?> </button>
         </form>
     </div>
 <?php endif ?>
